@@ -1,0 +1,15 @@
+server:
+  port: 8888
+spring:
+  rabbitmq:
+    host:
+    port: 5672
+    username: admin
+    password:
+    virtual-host: /
+    listener:
+      simple:
+        prefetch: 1
+        concurrency: 5
+        max-concurrency: 10
+        acknowledge-mode: none

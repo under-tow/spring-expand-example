@@ -16,7 +16,7 @@ RabbitMq为amqp协议
 
 
 ```yml
-server.port=8081
+server.port=端口
 spring.rabbitmq.host=IP地址
 spring.rabbitmq.port=端口
 spring.rabbitmq.username=用户名

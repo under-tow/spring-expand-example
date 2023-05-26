@@ -15,4 +15,33 @@ public class Consumer {
 
     }
 
+    @RabbitListener(queues = RabbitConst.QUEUE_FANOUT_Q1)
+    public void fanoutConsumer1(Message message, Channel channel, String messageStr){
+        System.out.println("QUEUE_FANOUT_Q1 receive : " + messageStr);
+    }
+
+    @RabbitListener(queues = RabbitConst.QUEUE_FANOUT_Q2)
+    public void fanoutConsumer2(Message message, Channel channel, String messageStr){
+        System.out.println("QUEUE_FANOUT_Q2 receive : " + messageStr);
+    }
+
+    @RabbitListener(queues = RabbitConst.QUEUE_FANOUT_Q3)
+    public void fanoutConsumer3(Message message, Channel channel, String messageStr){
+        System.out.println("QUEUE_FANOUT_Q3 receive : " + messageStr);
+    }
+
+    @RabbitListener(queues = RabbitConst.QUEUE_TOPIC_Q1)
+    public void topicConsumer1(Message message, Channel channel, String messageStr){
+        System.out.println("QUEUE_TOPIC_Q1 receive : " + messageStr);
+    }
+
+    @RabbitListener(queues = RabbitConst.QUEUE_TOPIC_Q2)
+    public void topicConsumer2(Message message, Channel channel, String messageStr){
+        System.out.println("QUEUE_TOPIC_Q2 receive : " + messageStr);
+    }
+
+    @RabbitListener(queues = RabbitConst.QUEUE_TOPIC_Q3)
+    public void topicConsumer3(Message message, Channel channel, String messageStr){
+        System.out.println("QUEUE_TOPIC_Q3 receive : " + messageStr);
+    }
 }
